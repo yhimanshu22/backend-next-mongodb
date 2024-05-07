@@ -1,7 +1,7 @@
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
 
-export async function POST() {
+export async function POST(request: Request) {
     await dbConnect()
 
     try {
@@ -49,16 +49,13 @@ export async function POST() {
 
 
     }
+    catch (error) {
+        console.error('error verifying user', error)
 
-
-
-
-    } catch (error) {
-    console.error('error verifying user', error)
-
-    return Response.json({
-        success: false,
-        message: 'error verifying user'
-    }, { status: 500 })
+        return Response.json({
+            success: false,
+            message: 'error verifying user'
+        }, { status: 500 })
+    }
 }
-}
+
