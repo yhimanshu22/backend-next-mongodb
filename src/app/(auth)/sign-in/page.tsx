@@ -1,9 +1,19 @@
-import React from 'react'
+'use client'
 
-const SignInForm = () => {
+import { zodResolver } from '@hookform/resolvers';
+import { useForm } from 'react-hook-form';
+import * as z from 'zod';
+import Link from 'next/link';
+import { useState } from 'react';
+
+
+const page = () => {
+    const [username, setUsername] = useState('')
+    const [usernameMessage, setUsernameMessage] = useState('')
+
     return (
-        <div> <h1>Hello bro how are you</h1></div>
+        <div>page</div>
     )
 }
 
-export default SignInForm
+export default page

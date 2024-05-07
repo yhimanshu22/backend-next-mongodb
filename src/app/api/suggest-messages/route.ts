@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from 'next/server';
 
-const googleAIKey = process.env.GOOGLE_AI_KEY || "AIzaSyCoJgND8xluFVoHTc56kBeRAiRomGs1Lho"; // Set a default value for the key if it is undefined
+const googleAIKey = process.env.GOOGLE_AI_KEY || "AluFVs1"; // Set a default value for the key if it is undefined
 const genAI = new GoogleGenerativeAI(googleAIKey);
 
 export const runtime = 'edge';
