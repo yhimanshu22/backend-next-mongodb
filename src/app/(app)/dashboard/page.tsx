@@ -1,6 +1,6 @@
 'use client';
 
-import { MessageCard } from '@/components/MessageCard';
+import { MessageCard } from '@/components/ui/MessageCard';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
@@ -40,7 +40,7 @@ function UserDashboard() {
         setIsSwitchLoading(true);
         try {
             const response = await axios.get<ApiResponse>('/api/accept-messages');
-            setValue('acceptMessages', response.data.isAcceptingMessages);
+            setValue('acceptMessages', response.data.isAcceptingMessage);
         } catch (error) {
             const axiosError = error as AxiosError<ApiResponse>;
             toast({

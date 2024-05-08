@@ -17,7 +17,7 @@ import {
     AlertDialogTitle,
     AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
-import { Button } from './ui/button';
+import { Button } from './button';
 import { useToast } from '@/components/ui/use-toast';
 import { ApiResponse } from '@/types/ApiResponse';
 
